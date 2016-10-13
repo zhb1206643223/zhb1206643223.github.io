@@ -1,0 +1,9 @@
+[
+  {"albumId":501, "id":1, "title":"测试照片1", "url":"http://open1234.oss-cn-shanghai.aliyuncs.com/image/home.jpg"},
+  {"albumId":501, "id":2, "title":"测试照片2", "url":"http://open1234.oss-cn-shanghai.aliyuncs.com/image/home.jpg"},
+  {"albumId":501, "id":3, "title":"测试照片3", "url":"http://open1234.oss-cn-shanghai.aliyuncs.com/image/home.jpg"},
+  {"albumId":501, "id":4, "title":"测试照片4", "url":"http://open1234.oss-cn-shanghai.aliyuncs.com/image/home.jpg"},
+  {"albumId":501, "id":5, "title":"测试照片5", "url":"http://open1234.oss-cn-shanghai.aliyuncs.com/image/home.jpg"},
+  {"albumId":501, "id":6, "title":"测试照片6", "url":"http://open1234.oss-cn-shanghai.aliyuncs.com/image/home.jpg"},
+  {"albumId":501, "id":7, "title":"测试照片7", "url":"http://open1234.oss-cn-shanghai.aliyuncs.com/image/home.jpg"}
+]
