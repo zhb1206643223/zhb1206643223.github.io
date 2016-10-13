@@ -1,0 +1,188 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>unit204003</title></head><body><div class="x-blog-template"><h1>Markdown简单入门</h1>
+
+<blockquote>
+  <p>Markdown 是一种轻量级标记语言。现在被越来越多的写作爱好者使用，并且现在越来越多的博客论坛开始支持Markdown。Markdown语法十分简单，别被“标记”所迷惑，它不像复杂的HTML标记语言，有很多种不同的标签，我们常用的标记符号也不超过十个。所以说Markdown十分轻量，学习成本低，一旦熟悉这种语法规则，会有一劳永逸的效果。</p>
+</blockquote>
+
+<h2>优点</h2>
+
+<ul>
+<li>专注你的文字内容而不是排版样式，安心写作。</li>
+<li>轻松的导出 HTML、PDF 和本身的 .md 文件。</li>
+<li>纯文本内容，兼容所有的文本编辑器与字处理软件。</li>
+<li>随时修改你的文章版本，不必像字处理软件生成若干文件版本导致混乱。</li>
+<li>可读、直观、学习成本低。</li>
+</ul>
+
+<h2>误区</h2>
+
+<p>Markdown 旨在简洁、高效，也由于 Markdown 的易读易写，人们用不同的编程语言实现了多个版本的解析器和生成器，这就导致了目前不同的 Markdown 工具集成了不同的功能（基础功能大致相同），例如流程图与时序图，复杂表格与复杂公式的呈现，虽然功能的丰富并没有什么本质的缺点，但终归有些背离初衷，何况在编写的过程中很费神，不如使用专业的工具撰写来的更有效率，所以如果你需实现复杂功能，专业的图形界面工具会更加方便。当然，如果你对折腾这些不同客户端对 Markdown 的定制所带来高阶功能感到愉悦的话，那也是无可厚非的。</p>
+
+<h2>简要语法规则</h2>
+
+<blockquote>
+  <p><a href="http://wowubuntu.com/markdown/#list">Markdown中文版语法说明</a></p>
+</blockquote>
+
+<ul>
+<li><p><strong>标题</strong></p>
+
+<p>编码：</p>
+
+<p><code># 一级标题</code></p>
+
+<p><code>## 二级标题</code></p>
+
+<p><code>### 三级标题</code></p>
+
+<p>效果：</p>
+
+<h1>一级标题</h1>
+
+<h2>二级标题</h2>
+
+<h3>三级标题</h3>
+
+<p>说明：</p>
+
+<blockquote>
+  <p>依次类推，总共6级标题，建议#号后面加一个空格</p>
+</blockquote></li>
+<li><p><strong>列表</strong></p>
+
+<p>编码：</p>
+
+<p><code>* 无序列表1</code></p>
+
+<p><code>* 无序列表2</code></p>
+
+<p><code>* 无序列表3</code></p>
+
+<p><code>1. 有序列表1</code></p>
+
+<p><code>2. 有序列表2</code></p>
+
+<p><code>3. 有序列表3</code></p>
+
+<p>效果：</p>
+
+<ul><li><p>无序列表1</p></li>
+<li><p>无序列表2</p></li>
+<li><p>无序列表3</p></li>
+<li><p>有序列表1</p></li>
+<li><p>有序列表2</p></li>
+<li><p>有序列表3</p></li></ul>
+
+<p>说明：</p>
+
+<blockquote>
+  <p>无序列表以‘* ’或‘- ’开头，有序列表以‘1. ’开头</p>
+</blockquote></li>
+<li><p><strong>引用</strong></p>
+
+<p>编码：</p>
+
+<p><code>&gt;  引用内容</code></p>
+
+<p>效果：</p>
+
+<blockquote>
+  <p>引用内容</p>
+</blockquote>
+
+<p>说明：</p>
+
+<blockquote>
+  <p>引用以‘> ’开头即可</p>
+</blockquote></li>
+<li><p><strong>图片与链接</strong></p>
+
+<p>编码：</p>
+
+<p><code>图片：![首页](http://open1234.oss-cn-shanghai.aliyuncs.com/image/home.jpg)</code></p>
+
+<p><code>链接：[Markdown中文版语法说明](http://wowubuntu.com/markdown/#list)</code></p>
+
+<p>效果：</p>
+
+<p>图片：<img src="http://open1234.oss-cn-shanghai.aliyuncs.com/image/home.jpg" alt="首页" title="" /></p>
+
+<p>链接：<a href="http://wowubuntu.com/markdown/#list">Markdown中文版语法说明</a></p>
+
+<p>说明：</p>
+
+<blockquote>
+  <p>插入链接与插入图片的语法很像，区别在一个 !号</p>
+  
+  <p>图片为：<code>![]()</code></p>
+  
+  <p>链接为：<code>[]()</code></p>
+</blockquote></li>
+<li><p><strong>粗体与斜体</strong></p>
+
+<p>编码：</p>
+
+<p><code>*斜体*</code></p>
+
+<p><code>**粗体**</code></p>
+
+<p>效果：</p>
+
+<p><em>斜体</em></p>
+
+<p><strong>粗体</strong></p>
+
+<p>说明：</p>
+
+<blockquote>
+  <p>用两个 * 包含一段文本就是粗体的语法，用一个 * 包含一段文本就是斜体的语法。</p>
+</blockquote></li>
+<li><p><strong>表格</strong></p>
+
+<p>编码：</p>
+
+<p><code>| left          | center        | right    |</code></p>
+
+<p><code>| ------------- |:-------------:| --------:|</code></p>
+
+<p><code>| abc           | abc           | abc      |</code></p>
+
+<p><code>| aaaaaaaaaaaa  | bbbbbbbbbbbb  | cccccc   |</code></p>
+
+<p>效果：</p>
+
+<p>| left          | center        | right    |
+| ------------- |:-------------:| --------:|
+| abc           | abc           | abc      |
+| aaaaaaaaaaaa  | bbbbbbbbbbbb  | cccccc   |</p></li>
+<li><p><strong>代码框</strong></p>
+
+<p>编码：</p>
+
+<p>`代码内容`</p>
+
+<p>效果：</p>
+
+<p><code>代码内容</code></p>
+
+<p>说明：</p>
+
+<blockquote>
+  <p>可以使用`包括起来，也可使用tab</p>
+</blockquote></li>
+<li><p><strong>分割线</strong></p>
+
+<p>编码：</p>
+
+<p><code>***</code></p>
+
+<p>效果：</p>
+
+<hr />
+
+<p>说明：</p>
+
+<blockquote>
+  <p>分割线的语法只需要三个 * 号</p>
+</blockquote></li>
+</ul></div></body></html>
