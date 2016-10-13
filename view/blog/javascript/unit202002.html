@@ -1,0 +1,341 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>unit202002</title></head><body><div class="x-blog-template"><h1>前端开发－Jade模版引擎入门</h1>
+
+<h2>安装</h2>
+
+<ol>
+<li>安装NodeJs，这里不做详细说明了。</li>
+<li><p>安装完NodeJs后，可直接利用npm包管理器进行安装!</p>
+
+<p>命令如下：</p>
+
+<p><code>npm install jade -g</code></p></li>
+<li><p>这样就安装完成了，jade就被安装在全局了！我们可以利用如下命令查看是否安装完成！</p>
+
+<p><code>jade --version</code></p></li>
+</ol>
+
+<h2>编译命令</h2>
+
+<p>命令（无格式）：</p>
+
+<pre><code>jade test.jade
+</code></pre>
+
+<p>命令（有格式）：</p>
+
+<pre><code>jade -P test.jade
+</code></pre>
+
+<h2>语法</h2>
+
+<blockquote>
+  <p>标签</p>
+</blockquote>
+
+<p>jade：<code>html</code></p>
+
+<p>html：<code>&lt;html&gt;&lt;/html&gt;</code></p>
+
+<blockquote>
+  <p>文本</p>
+</blockquote>
+
+<p>jade：<code>p HelloWorld!</code></p>
+
+<p>html：<code>&lt;p&gt;HelloWorld!&lt;/p&gt;</code></p>
+
+<blockquote>
+  <p>多文本</p>
+</blockquote>
+
+<p>jade：</p>
+
+<pre><code>p 
+    | foo bar baz
+    | wawr wawr
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;p&gt; 
+foo bar baz
+wawr wawr&lt;/p&gt;   
+</code></pre>
+
+<p>jade：</p>
+
+<pre><code>p.
+    asdads
+    asd
+     adasd
+     asd
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;p&gt;asdads
+asd
+ adasd
+ asd&lt;/p&gt;
+</code></pre>
+
+<p>注意：带空格的‘.’会被Jade解析器忽略如：</p>
+
+<pre><code>p . 渲染后 &lt;p&gt;.&lt;/p&gt;
+</code></pre>
+
+<blockquote>
+  <p>注释</p>
+</blockquote>
+
+<p>jade：</p>
+
+<pre><code>// 单行注释
+&lt;!-- 单行注释 --&gt;
+//- 不输出的单行注释
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;!-- 单行注释--&gt;&lt;!-- 单行注释 --&gt;
+</code></pre>
+
+<blockquote>
+  <p>属性</p>
+</blockquote>
+
+<p>jade：</p>
+
+<pre><code>a(href='#',title='空链接') 超级链接
+div(class='test',id='yyy',style='color:red')
+    test
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;a href="#" title="空链接"&gt;超级链接&lt;/a&gt;&lt;div id="yyy" style="color:red" class="test"&gt;&lt;test&gt;&lt;/test&gt;&lt;/div&gt;
+</code></pre>
+
+<blockquote>
+  <p>标签id，class</p>
+</blockquote>
+
+<p>jade：</p>
+
+<pre><code>div#u.yyy
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;div id="u" class="yyy"&gt;&lt;/div&gt;
+</code></pre>
+
+<blockquote>
+  <p>可执行代码</p>
+</blockquote>
+
+<p>jade目前支持三种类型的可执行代码</p>
+
+<ol>
+<li>无前缀</li>
+<li>前缀－</li>
+<li>前缀＝</li>
+</ol>
+
+<p>jade：</p>
+
+<pre><code>-var items = [1,2,3,4]
+-if(items.length)
+    ul
+        -items.forEach(function(item){
+        li= item
+        -})
+- var foo = 'test'
+= foo
+foo
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;ul&gt;&lt;li&gt;1&lt;/li&gt;&lt;li&gt;2&lt;/li&gt;&lt;li&gt;3&lt;/li&gt;&lt;li&gt;4&lt;/li&gt;&lt;/ul&gt;test&lt;foo&gt;&lt;/foo&gt;
+</code></pre>
+
+<blockquote>
+  <p>循环</p>
+</blockquote>
+
+<ul>
+<li>数组遍历 each in</li>
+</ul>
+
+<p>jade：</p>
+
+<pre><code>- var items = ["刘备","关羽","张飞"]
+each item, i in items
+    li #{item} : #{i}
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;li&gt;刘备 : 0&lt;/li&gt;&lt;li&gt;关羽 : 1&lt;/li&gt;&lt;li&gt;张飞 : 2&lt;/li&gt;
+</code></pre>
+
+<ul>
+<li>对象遍历 each in</li>
+</ul>
+
+<p>jade：</p>
+
+<pre><code>-var obj = {name:"admin",age:55,sex:male}
+each val, key in obj
+    li #{key}: #{val}
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;li&gt;name: admin&lt;/li&gt;&lt;li&gt;age: 55&lt;/li&gt;&lt;li&gt;sex: &lt;/li&gt;
+</code></pre>
+
+<ul>
+<li>for in循环</li>
+</ul>
+
+<p>jade：</p>
+
+<pre><code>-var dogs = {'Pug':{name:'哈哈',age:'0.9'},'Golden Retriever':{name:'九九',age:'0.7'}}
+for dog in dogs
+    li=dog.name
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;li&gt;哈哈&lt;/li&gt;&lt;li&gt;九九&lt;/li&gt;
+</code></pre>
+
+<blockquote>
+  <p>判断</p>
+</blockquote>
+
+<ul>
+<li>if else</li>
+</ul>
+
+<p>jade：</p>
+
+<pre><code>-var name = 'admin'
+-if (name == 'admin')
+    ok
+-else
+    error
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;ok&gt;&lt;/ok&gt;
+</code></pre>
+
+<ul>
+<li>case when</li>
+</ul>
+
+<p>jade：</p>
+
+<pre><code>-var i = 1
+case i
+    when 0
+        p sorry
+    when 1
+        p yeah!
+    default
+        p ????
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;p&gt;yeah!&lt;/p&gt;
+</code></pre>
+
+<blockquote>
+  <p>模版继承</p>
+</blockquote>
+
+<p>Jade支持通过 block 和 extends 关键字来实现模板继承。</p>
+
+<p>layout.jade</p>
+
+<pre><code>html
+    head
+        h1 My Site - #{title}
+        block scripts
+        script(src='/jquery.js')
+    body
+        block content
+        block foot
+            #footer
+                p some footer content
+</code></pre>
+
+<p>test.jade：</p>
+
+<pre><code>extends layout
+
+block scripts
+    script(src='/pets.js')
+
+block content
+    h1= title
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;html&gt;&lt;head&gt;&lt;h1&gt;My Site - &lt;/h1&gt;&lt;script src="/pets.js"&gt;&lt;/script&gt;&lt;script src="/jquery.js"&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;&lt;/h1&gt;&lt;div id="footer"&gt;&lt;p&gt;some footer content&lt;/p&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre>
+
+<blockquote>
+  <p>包含</p>
+</blockquote>
+
+<p>利用include将其他组件添加进来</p>
+
+<pre><code>html
+    include head.jade
+    body
+        h1 title
+</code></pre>
+
+<blockquote>
+  <p>Mixins</p>
+</blockquote>
+
+<p>jade：</p>
+
+<pre><code>mixin list
+    ul
+        li foo
+        li bar
+        li baz
+
+h2 Groceries
++list
++list
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;h2&gt;Groceries&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;foo&lt;/li&gt;&lt;li&gt;bar&lt;/li&gt;&lt;li&gt;baz&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;foo&lt;/li&gt;&lt;li&gt;bar&lt;/li&gt;&lt;li&gt;baz&lt;/li&gt;&lt;/ul&gt;
+</code></pre>
+
+<blockquote>
+  <p>变量表达式</p>
+</blockquote>
+
+<p>jade：</p>
+
+<pre><code>- var s = 'test'
+p #{s}
+</code></pre>
+
+<p>html：</p>
+
+<pre><code>&lt;p&gt;test&lt;/p&gt;
+</code></pre></div></body></html>
