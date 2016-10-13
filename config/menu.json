@@ -12,7 +12,7 @@
 
   {"id":301, "title":"视频测试", "parentId":3, "url":"javascript:load('view/video/unit301.html',setVideoPageWidth);", "icon":null, "path":"#3#301"},
 
-  {"id":401, "title":"codeg", "parentId":4, "url":"https://github.com/open1234/codeg", "icon":null, "path":"#4#401"},
+  {"id":401, "title":"codeg", "parentId":4, "url":"https://github.com/zhb1206643223/codeg", "icon":null, "path":"#4#401"},
 
   {"id":501, "title":"生活纪录", "parentId":5, "url":"javascript:load('view/album/unit501.html');", "icon":null, "path":"#5#501"},
 
