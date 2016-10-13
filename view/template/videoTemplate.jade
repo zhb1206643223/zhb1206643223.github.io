@@ -1,0 +1,19 @@
+doctype html
+html
+   head
+      meta(charset='utf-8')
+      block title
+         title 视频模版
+   body
+      div.x-video-template
+         block x-video-title
+            div.x-video-title 视频模版标题
+         div.x-video-media
+            block x-video-media
+               div 视频模版多媒体块,可放优酷\土豆等在线视频分享链接
+         div.x-video-content
+            block x-video-content
+               p 视频模版内容块,主要可对视频进行介绍说明
+            div.x-video-url
+               block x-video-url
+                  p 视频资源分享链接,因为存在分享视频不清晰的情况,可分享出原来的视频链接或资源下载路径供别人直接观看使用
