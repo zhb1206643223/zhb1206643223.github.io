@@ -1,0 +1,28 @@
+[
+  {"id":1, "title":"首页", "parentId":null, "url":"javascript:load('view/home.html',setHomeImageSize);", "icon":"fa fa-home", "path":"#1"},
+  {"id":2, "title":"博客", "parentId":null, "url":null, "icon":"fa fa-laptop", "path":"#2"},
+  {"id":3, "title":"视频", "parentId":null, "url":null, "icon":"fa fa-film", "path":"#3"},
+  {"id":4, "title":"作品", "parentId":null, "url":null, "icon":"fa fa-star", "path":"#4"},
+  {"id":5, "title":"相册", "parentId":null, "url":null, "icon":"fa fa-image", "path":"#5"},
+  {"id":6, "title":"个人", "parentId":null, "url":"javascript:load('view/user.html');", "icon":"fa fa-user", "path":"#6"},
+
+  {"id":201, "title":"Java学习", "parentId":2, "url":null, "icon":null, "path":"#2#201"},
+  {"id":202, "title":"前端开发", "parentId":2, "url":null, "icon":null, "path":"#2#202"},
+  {"id":204, "title":"随手纪录", "parentId":2, "url":null, "icon":null, "path":"#2#204"},
+
+  {"id":301, "title":"视频测试", "parentId":3, "url":"javascript:load('view/video/unit301.html',setVideoPageWidth);", "icon":null, "path":"#3#301"},
+
+  {"id":401, "title":"codeg", "parentId":4, "url":"https://github.com/open1234/codeg", "icon":null, "path":"#4#401"},
+
+  {"id":501, "title":"生活纪录", "parentId":5, "url":"javascript:load('view/album/unit501.html');", "icon":null, "path":"#5#501"},
+
+  {"id":201001, "title":"知识体系大纲", "parentId":201, "url":"javascript:load('view/blog/java/unit201001.html',setBlogPageStyle);", "icon":null, "path":"#2#201#201001"},
+
+  {"id":202001, "title":"ES6入门笔记一", "parentId":202, "url":"javascript:load('view/blog/javascript/unit202001.html',setBlogPageStyle);", "icon":null, "path":"#2#202#202001"},
+  {"id":202002, "title":"Jade入门", "parentId":202, "url":"javascript:load('view/blog/javascript/unit202002.html',setBlogPageStyle);", "icon":null, "path":"#2#202#202002"},
+
+  {"id":204001, "title":"网站资源分享", "parentId":204, "url":"javascript:load('view/blog/other/unit204001.html',setBlogPageStyle);", "icon":null, "path":"#2#204#204001"},
+  {"id":204002, "title":"GitHub博客", "parentId":204, "url":"javascript:load('view/blog/other/unit204002.html',setBlogPageStyle);", "icon":null, "path":"#2#204#204002"},
+  {"id":204003, "title":"Markdown入门", "parentId":204, "url":"javascript:load('view/blog/other/unit204003.html',setBlogPageStyle);", "icon":null, "path":"#2#204#204003"}
+
+]
