@@ -1,0 +1,13 @@
+extends ../template/videoTemplate
+block title
+   title unit301
+block x-video-title
+   div.x-video-title 视频模版标题
+block x-video-media
+   iframe(src="http://www.tudou.com/programs/view/html5embed.action?type=3&code=tTmOlNaClbQ&lcode=y3YEHxuXSvU&resourceId=0_06_05_99" allowtransparency="true" allowfullscreen="true" allowfullscreenInteractive="true" scrolling="no" border="0" frameborder="0")
+block x-video-content
+   p 视频模版内容块
+block x-video-url
+   span 资源分享:
+   each val, index in {'百度':'http://www.baidu.com','淘宝':'http://www.taobao.com'}
+      a(href=val target="_blank")= index
